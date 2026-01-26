@@ -9,6 +9,7 @@ import {
   useActionData,
   useRouteError,
 } from 'react-router';
+import { Analytics } from "@vercel/analytics/remix"
 
 import type { Route } from './+types/root';
 import { Navbar } from './components/navbar/navbar';
@@ -43,7 +44,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 function InnerLayout({ children }: { children: React.ReactNode }) {
-  const actionData = useActionData<typeof action>();
   const { modal, closeModal } = useModal();
 
   return (
@@ -55,8 +55,10 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
       <Components.ContactModal
         open={modal === 'contact'}
         onClose={closeModal}
-        success={actionData?.success}
+
       />
+      {/* Vercel Analytics */}
+      <Analytics />
       <Footer />
     </>
   );
