@@ -37,6 +37,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <InnerLayout>{children}</InnerLayout>
         </ModalProvider>
         <ScrollRestoration />
+        {/* Vercel Analytics */}
+        <Analytics />
         <Scripts />
       </body>
     </html>
@@ -57,8 +59,7 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
         onClose={closeModal}
 
       />
-      {/* Vercel Analytics */}
-      <Analytics />
+
       <Footer />
     </>
   );
