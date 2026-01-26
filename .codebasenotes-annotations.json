@@ -1,0 +1,24 @@
+{
+  "type": "dir",
+  "subNodes": {
+    "app": {
+      "type": "dir",
+      "subNodes": {
+        "components": {
+          "type": "dir",
+          "subNodes": {
+            "hero": {
+              "type": "dir",
+              "subNodes": {
+                "heroSlider.tsx": {
+                  "type": "tsx",
+                  "annotation": "1. Fetch data from sanity.io and replace static data.\n"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

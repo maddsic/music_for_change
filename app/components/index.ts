@@ -1,0 +1,11 @@
+export { HeroSlider } from './hero/heroSlider';
+export { AboutUs } from './aboutUs/about';
+export { WhatWeDo } from './whatWeDo/whatWeDo';
+export { ImpactStats } from './stats/stats';
+export { Events } from './events/events';
+export { OurProjects } from './projects/ourProjects';
+export { OurPartners } from './partners/ourPartners';
+export { ContactModal } from './contact/contactModal';
+export { OurTeam } from './team/team';
+export { Testimonials } from './testimonial/testimonial';
+export { Gallery } from './gallary/gallary';
