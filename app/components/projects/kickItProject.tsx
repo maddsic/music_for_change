@@ -1,64 +1,107 @@
 export default function KickItProject() {
+  const artists = ["Awa Bling", "Mariam Cham", "Sparklyn Black", "Rupey Mace", "Laxmiel", "Lena B"];
+
   return (
-    <>
-      <header>
-        <h2 className="text-3xl font-bold">Kick It Out</h2>
-        <p className="text-gray-600 mt-2">Music as advocacy • Social transformation initiative</p>
+    <article className="max-w-5xl mx-auto px-6 py-16 text-slate-800 leading-relaxed">
+      {/* Header with floating badge */}
+      <header className="mb-12 text-center md:text-left">
+        <div className="flex items-center justify-center md:justify-start gap-2 mb-4">
+          <span className="h-px w-8 bg-primary"></span>
+          <span className="text-primary uppercase tracking-[0.2em] text-xs font-bold">
+            Social Transformation
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight mb-4">
+          Kick It Out
+        </h2>
+        <p className="text-xl text-slate-500 font-light max-w-2xl">
+          Strengthening the role of Gambian artists as catalysts for nationwide advocacy and behavioral change.
+        </p>
       </header>
 
-      <div
-        className="relative w-full
-          rounded-2xl overflow-hidden
-          shadow-lg my-10
-          bg-black h-55 sm:h-70 md:h-90"
-      >
-        <iframe
-          src="https://www.youtube.com/embed/2qGI0jvwEHg"
-          title="Kick It Out Documentary"
-          className="absolute inset-0 w-full h-full"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+      {/* Video Section with "Cinema" frame */}
+      <div className="relative group my-12">
+        <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-slate-900 rounded-[2rem] blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-2xl bg-black">
+          <iframe
+            src="https://www.youtube.com/embed/2qGI0jvwEHg"
+            title="Kick It Out Documentary"
+            className="absolute inset-0 w-full h-full"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       </div>
 
-      <p className="text-gray-700 mb-6 scroll-">
-        Kick It Out is a music-led advocacy initiative designed to strengthen the role of Gambian
-        artists as voices for social change. By combining creative expression with advocacy
-        training, the project uses music as an accessible and powerful tool to promote awareness,
-        dialogue, and behavioral change.
-      </p>
+      {/* Project Overview Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
 
-      <h4 className="text-lg font-semibold mb-2">Phase One: Training & Music Production</h4>
-      <p className="text-gray-600 mb-4">
-        The first phase of the project consisted of a three-day intensive training that equipped six
-        Gambian artists with practical knowledge on advocacy, human rights, and social justice,
-        alongside guidance on translating these themes into impactful music.
-      </p>
+        {/* Main Narrative */}
+        <div className="md:col-span-2 space-y-8">
+          <section>
+            <p className="text-xl text-slate-700 leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:text-primary first-letter:mr-3 first-letter:float-left">
+              Kick It Out is a music-led advocacy initiative designed to strengthen the role of Gambian
+              artists as voices for social change. By combining creative expression with advocacy
+              training, the project uses music as an accessible tool to promote awareness.
+            </p>
+          </section>
 
-      <p className="text-gray-600 mb-4">
-        This phase also included the recording of the Kick It Out album. Each artist produced an
-        individual advocacy song, alongside a collaborative track featuring all six artists,
-        resulting in a seven-track album addressing key social issues.
-      </p>
+          <section className="bg-slate-50 p-8 rounded-2xl border-l-4 border-slate-900">
+            <h4 className="text-sm uppercase tracking-widest font-bold text-slate-400 mb-4">Phase One</h4>
+            <h3 className="text-2xl font-bold mb-4">Training & Music Production</h3>
+            <p className="text-slate-600 mb-4">
+              An intensive three-day training equipped six artists with practical knowledge on
+              <strong> advocacy, human rights, and social justice</strong>, translating these
+              complex themes into impactful, melodic storytelling.
+            </p>
+            <p className="text-slate-600">
+              The result: A powerful 7-track album where individual narratives meet a
+              unifying collaborative anthem.
+            </p>
+          </section>
+        </div>
 
-      <h4 className="text-lg font-semibold mb-2">Artists & Partners</h4>
-      <p className="text-gray-600 mb-4">
-        The project was generously sponsored by Alliance Française de Banjul, whose support was
-        instrumental in the successful delivery of both the training and music production
-        components.
-      </p>
+        {/* Sidebar Info */}
+        <div className="space-y-10">
+          {/* Artists List */}
+          <div>
+            <h4 className="text-xs uppercase tracking-widest font-black text-secondary mb-6">Featured Artists</h4>
+            <ul className="space-y-3">
+              {artists.map((artist) => (
+                <li key={artist} className="flex items-center gap-3 text-slate-700 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  {artist}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <p className="text-gray-600 mb-4">
-        Participating artists include{' '}
-        <em>Awa Bling, Mariam Cham, Sparklyn Black, Rupey Mace, Laxmiel, and Lena B.</em>
-      </p>
+          {/* Partner Brand */}
+          <div className="pt-8 border-t border-slate-100">
+            <h4 className="text-xs uppercase tracking-widest font-black text-slate-400 mb-4">Key Partner</h4>
+            <div className="p-4 bg-white border border-slate-100 rounded-xl shadow-sm italic text-slate-600 text-sm">
+              "Generously sponsored by Alliance Française de Banjul, instrumental in delivering both training and production."
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <h4 className="text-lg font-semibold mb-2">What&apos;s Next</h4>
-      <p className="text-gray-600">
-        Building on these outputs, Kick It Out will expand its reach through the production of music
-        videos, targeted media engagements, and a nationwide caravan tour aimed at stimulating
-        dialogue and raising awareness across diverse Gambian communities.
-      </p>
-    </>
+      {/* "What's Next" Banner */}
+      <footer className="mt-20 bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden">
+        <div className="relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="text-center md:text-left">
+            <h4 className="text-2xl font-bold mb-2">The Journey Continues</h4>
+            <p className="text-slate-400 max-w-md">
+              Expanding reach through music videos, media engagements, and a nationwide caravan tour across The Gambia.
+            </p>
+          </div>
+          <button className="whitespace-nowrap bg-secondary hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg shadow-red-900/20">
+            Follow the Tour
+          </button>
+        </div>
+        {/* Decorative circle */}
+        <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-red-600/10 rounded-full blur-3xl"></div>
+      </footer>
+    </article>
   );
 }

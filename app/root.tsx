@@ -6,10 +6,9 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useActionData,
   useRouteError,
 } from 'react-router';
-import { Analytics } from "@vercel/analytics/remix"
+import { Analytics } from "@vercel/analytics/react"
 
 import type { Route } from './+types/root';
 import { Navbar } from './components/navbar/navbar';
@@ -45,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Separate component to use hooks like useModal
 function InnerLayout({ children }: { children: React.ReactNode }) {
   const { modal, closeModal } = useModal();
 

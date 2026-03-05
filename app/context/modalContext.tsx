@@ -1,7 +1,7 @@
 import { createContext, use, useState } from 'react';
 
 // Define the type for the modal state
-type ModalType = 'contact' | 'project' | null;
+type ModalType = 'contact' | 'project' | "album" | null;
 
 // Define the context type
 type ModalContextType = {

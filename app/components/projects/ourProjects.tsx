@@ -7,7 +7,7 @@ export function OurProjects() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-primary-foreground">Our Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground uppercase">Our Projects</h2>
           <p className="mt-2 text-primary-foreground max-w-xl">
             Initiatives using music as a tool to inspire awareness, dialogue, and positive social
             change.

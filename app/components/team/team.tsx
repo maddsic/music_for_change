@@ -29,19 +29,14 @@ export function OurTeam() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
-        <motion.div
-          style={{ y: headerY }}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Our Team</h2>
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
+            Our <span className="text-secondary">Team</span>
+          </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
             Artists, advocates, and change-makers using music as a force for social transformation.
           </p>
-        </motion.div>
+        </div>
 
         {/* Cards grid */}
         <motion.div style={{ y: cardsY, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }} className="grid gap-10 max-w-6xl justify-items-center">

@@ -3,6 +3,7 @@ import type { Route } from './+types/home';
 import * as Components from '~/components';
 import { useModal } from '~/hooks/useModal';
 import ProjectModal from '~/components/projects/projectModal';
+import EventModal from '~/components/events/eventModal';
 
 export function meta({ }: Route.MetaArgs) {
   return [{ title: 'Music For Change' }, { name: 'description', content: 'Music for Change' }];
@@ -20,6 +21,7 @@ export default function Home() {
         <Components.WhatWeDo />
         <Components.ImpactStats />
         <Components.Events />
+        <EventModal open={modal === 'album'} onClose={closeModal} />
         <Components.OurProjects />
         <ProjectModal open={modal === 'project'} onClose={closeModal} />
         <Components.OurPartners />
