@@ -24,6 +24,10 @@ const events = [
 export function Events() {
   const { openModal } = useModal();
 
+  const handleEventClick = (eventId: number) => {
+    if (eventId === 2) return openModal("album")
+  }
+
   return (
     <section id="events" className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -36,8 +40,7 @@ export function Events() {
           {events.map((event, idx) => (
             <div
               key={event.id}
-              className={`flex flex-col md:flex-row items-center gap-8 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''
-                }`}
+              className={`flex flex-col md:flex-row items-center gap-8 ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
             >
               {/* Text */}
               <div className="md:w-1/2 text-center md:text-left">
@@ -46,7 +49,7 @@ export function Events() {
                   {event.date} | {event.location}
                 </p>
                 <p className="mt-4 text-gray-700 leading-relaxed">{event.description}</p>
-                <button onClick={() => openModal("album")} className="mt-6 bg-secondary text-white btn-hover px-6 py-2 rounded-md">
+                <button onClick={() => handleEventClick(event.id)} className="mt-6 bg-secondary text-white btn-hover px-6 py-2 rounded-md">
                   Learn More
                 </button>
               </div>
